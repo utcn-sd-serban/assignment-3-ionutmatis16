@@ -27,7 +27,7 @@ public class HibernateQuestionRepository extends HibernateAbstractRepository<Que
         Root<Question> from = cq.from(Question.class);
 
         cq.select(from);
-        cq.where(entityManager.getCriteriaBuilder().like(from.get("title"),"%"+title+"%")); // <- this will add the restriction.
+        cq.where(entityManager.getCriteriaBuilder().like(from.get("title"), "%" + title + "%")); // <- this will add the restriction.
 
 
         return entityManager.createQuery(cq).getResultList();

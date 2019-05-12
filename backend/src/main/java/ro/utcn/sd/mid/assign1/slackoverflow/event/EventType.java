@@ -1,6 +1,6 @@
 package ro.utcn.sd.mid.assign1.slackoverflow.event;
 
-public enum  EventType {
+public enum EventType {
     QUESTION_CREATED,
     USER_CREATED,
     ANSWER_CREATED,

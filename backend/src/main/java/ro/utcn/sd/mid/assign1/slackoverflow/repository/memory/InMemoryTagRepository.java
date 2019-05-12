@@ -26,7 +26,7 @@ public class InMemoryTagRepository extends InMemoryAbstractRepository<Tag>
 
     @Override
     public List<Question> findQuestionsByTag(Tag tag) {
-        for(Tag t : data.values()) {
+        for (Tag t : data.values()) {
             if (t.getId().equals(tag.getId())) {
                 return new ArrayList<>(t.getTaggedQuestions());
             }

@@ -17,7 +17,7 @@ public class InMemoryQuestionRepository extends InMemoryAbstractRepository<Quest
     public List<Question> findByTitle(String title) {
         List<Question> questions = new ArrayList<>(super.getData().values());
         List<Question> result = new ArrayList<>();
-        for(Question q : questions) {
+        for (Question q : questions) {
             if (q.getTitle().toLowerCase().contains(title.toLowerCase())) {
                 result.add(q);
             }

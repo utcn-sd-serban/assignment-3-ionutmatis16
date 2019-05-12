@@ -2,7 +2,6 @@ package ro.utcn.sd.mid.assign1.slackoverflow.event;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import ro.utcn.sd.mid.assign1.slackoverflow.dto.AnswerDTO;
 import ro.utcn.sd.mid.assign1.slackoverflow.entity.Answer;
 
 @Data

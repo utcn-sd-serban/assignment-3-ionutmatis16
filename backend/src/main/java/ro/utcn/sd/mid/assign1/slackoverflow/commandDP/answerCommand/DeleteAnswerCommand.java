@@ -12,6 +12,6 @@ public class DeleteAnswerCommand implements Command {
 
     @Override
     public Object execute() {
-        return answerService.deleteAnswer(answerId,name);
+        return answerService.deleteAnswer(answerId, name);
     }
 }

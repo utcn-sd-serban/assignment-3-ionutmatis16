@@ -3,11 +3,10 @@ package ro.utcn.sd.mid.assign1.slackoverflow.event;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import ro.utcn.sd.mid.assign1.slackoverflow.dto.AnswerDTO;
-import ro.utcn.sd.mid.assign1.slackoverflow.dto.QuestionDTO;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
-public class AnswerEditedEvent extends BaseEvent{
+public class AnswerEditedEvent extends BaseEvent {
     private final AnswerDTO answer;
 
     public AnswerEditedEvent(AnswerDTO answer) {

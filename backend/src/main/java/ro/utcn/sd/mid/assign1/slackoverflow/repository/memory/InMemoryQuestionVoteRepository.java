@@ -11,7 +11,7 @@ public class InMemoryQuestionVoteRepository extends InMemoryAbstractRepository<Q
     @Override
     public int voteNr(Question question, boolean voteType) {
         int nr = 0;
-        for(QuestionVote qv : getData().values()) {
+        for (QuestionVote qv : getData().values()) {
             if (qv.getQuestionId().equals(question.getId()) && (qv.getVoteType() == voteType)) {
                 nr++;
             }
@@ -22,7 +22,7 @@ public class InMemoryQuestionVoteRepository extends InMemoryAbstractRepository<Q
 
     @Override
     public Optional<QuestionVote> findByQuestionSOUser(Integer questionId, Integer soUserId) {
-        for(QuestionVote questionVote : getData().values()) {
+        for (QuestionVote questionVote : getData().values()) {
             if (questionVote.getQuestionId().equals(questionId)
                     && questionVote.getUserId().equals(soUserId))
                 return Optional.of(questionVote);

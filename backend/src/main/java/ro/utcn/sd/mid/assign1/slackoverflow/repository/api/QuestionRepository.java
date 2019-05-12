@@ -8,6 +8,8 @@ import java.util.List;
 
 public interface QuestionRepository extends AbstractRepository<Question> {
     List<Question> findByTitle(String title);
+
     List<Tag> findTagsByQuestion(Question question);
+
     List<Question> findSOUserQuestions(SOUser soUser);
 }

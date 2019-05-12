@@ -11,7 +11,8 @@ import java.util.List;
 @Getter
 @Setter
 @Entity(name = "tags")
-@NoArgsConstructor @AllArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class Tag implements IDEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

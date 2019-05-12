@@ -1,68 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Software Design - Assignment 2 ![Deadline 14.04.2019 23:59](https://img.shields.io/badge/deadline-14.04.2019%2023%3A59-blue.svg "Deadline: 14.04.2019 23:59")
+This is the second assignment of the software design laboratory.
 
-## Available Scripts
+## Resources
+The feature descriptions may be found in [this presentation](https://slides.com/spet/utcn-sd-assignment-topic), whilst the theoretical background may be found in [this presentation](https://slides.com/spet/utcn-sd-assignment-2).
 
-In the project directory, you can run:
+## Design Constraints
+ * MV* architecture (MVC or MVP recommended),
+ * Using an Observer pattern,
+ * Without any backend for persistance,
+ * Holding the state purely in memory.
 
-### `npm start`
+## Recommended Technologies
+ * NodeJS,
+ * VSCode,
+ * React.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting started
+ * Install [Visual Studio Code](https://code.visualstudio.com/) and [NodeJS](https://nodejs.org/en/),
+ * Run `npm i -g create-react-app` in a command line (installs [Create React App](https://github.com/facebook/create-react-app)),
+ * Run `create-react-app assignment-2` in your working directory,
+ * Move into the newly created `assignment-2` directory (`cd assignment-2`),
+ * Run `npm start` to start your application,
+ * A web browser should be launched to display the new app (a hello world).
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Now you can directly change the code and the application will automatically reload your browser.
 
-### `npm test`
+## Grading
+Minimum requirements for a passing grade:
+ * Browser-based U.I.,
+ * Feature 1,
+ * Clear MV* separation,
+ * Observable model.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Additional requirements:
 
-### `npm run build`
+| Requirement                        | Grade |
+|------------------------------------|-------|
+| Primitive model-based routing      |   6   |
+| Feature 2                          |   8   |
+| Feature 3                          |  10   |
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Bonus requirements:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+| Requirement                                                | Points |
+|------------------------------------------------------------|--------|
+| Prepare and present mockups (picture / wireframe / paper)  | 1.0    |
+| Use Redux for holding the state                            | 2.0    |
+| Use React Router for handling the routing                  | 1.0    |
+| Use a CSS library (e.g. Bulma, Bootstrap) for styling*     | 1.0    |
+| Write [component tests](https://facebook.github.io/create-react-app/docs/running-tests#option-2-react-testing-library) for your views | 1.0    | 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+*Do not use a React control library, just a (S)CSS library to style your HTML*

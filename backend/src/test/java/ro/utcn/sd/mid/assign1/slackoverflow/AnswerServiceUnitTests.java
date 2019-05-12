@@ -13,7 +13,8 @@ public class AnswerServiceUnitTests {
 
     private static Answer a1 = new Answer(1, 1, "Ans1");
     private static Answer a2 = new Answer(2, 1, "Ans2");
-    private final static ApplicationEventPublisher eventPublisher = (o) -> {};
+    private final static ApplicationEventPublisher eventPublisher = (o) -> {
+    };
 
     private static RepositoryFactory createMockedFactory() {
         RepositoryFactory factory = new InMemoryRepositoryFactory();

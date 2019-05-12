@@ -1,7 +1,7 @@
 import React from 'react';
 import MyNavbar from "./MyNavbar";
 import '../../App.css';
-import {Collapse, CardBody, Card, Button} from 'reactstrap';
+import {Button, Card, CardBody, Collapse} from 'reactstrap';
 
 
 const LoginRegister = ({

@@ -7,5 +7,6 @@ import java.util.Optional;
 
 public interface AnswerVoteRepository extends AbstractRepository<AnswerVote> {
     int voteNr(Answer answer, boolean voteType);
+
     Optional<AnswerVote> findByAnswerSOUser(Integer answerId, Integer soUserId);
 }

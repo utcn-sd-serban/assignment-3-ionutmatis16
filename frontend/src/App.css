@@ -19,14 +19,14 @@ html {
 
 .askButtonClass {
     background-color: #5085a5 !important;
-    color: #f7f9fb !important; 
+    color: #f7f9fb !important;
 }
 
 
 .askQuestionForm {
     padding-top: 10px !important;
     margin: auto !important;
-	width: 70% !important;
+    width: 70% !important;
 }
 
 .card {
@@ -57,7 +57,7 @@ html {
 }
 
 #loggedIn {
-    padding-right: 10px; 
+    padding-right: 10px;
     color: #ffffff
 }
 

@@ -1,7 +1,7 @@
 // DUMB Component
 import React from 'react';
 import '../../App.css';
-import {UncontrolledCollapse, CardBody, Card} from 'reactstrap';
+import {Card, CardBody, UncontrolledCollapse} from 'reactstrap';
 import MyNavbar from './MyNavbar';
 import MyVoteSystem from "./MyVoteSystem";
 import MyCard from "./MyCard";

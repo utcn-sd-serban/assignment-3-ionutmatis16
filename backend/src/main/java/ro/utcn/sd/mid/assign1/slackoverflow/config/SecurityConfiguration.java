@@ -27,8 +27,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 // next line disables session creation (forces true HTTP Basic behavior)
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .cors().and()
-                .csrf().disable()
-                .logout().clearAuthentication(true).permitAll();
+                .csrf().disable();
     }
 
     @Override

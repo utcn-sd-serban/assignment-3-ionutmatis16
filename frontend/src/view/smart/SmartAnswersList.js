@@ -40,7 +40,6 @@ export default class SmartAnswersList extends Component {
     }
 
 
-
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.index !== this.props.match.params.index) {
             this.setState(mapModelStateToComponentState(questionModel, answerModel, this.props));

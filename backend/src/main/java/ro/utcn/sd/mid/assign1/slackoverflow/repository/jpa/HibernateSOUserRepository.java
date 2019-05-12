@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @Component
 public class HibernateSOUserRepository extends HibernateAbstractRepository<SOUser>
-implements SOUserRepository {
+        implements SOUserRepository {
     private final EntityManager entityManager;
 
     public HibernateSOUserRepository(EntityManager entityManager) {
@@ -26,7 +26,7 @@ implements SOUserRepository {
         Root<SOUser> from = cq.from(SOUser.class);
 
         cq.select(from);
-        cq.where(entityManager.getCriteriaBuilder().equal(from.get("sOUsername"),name)); // <- this will add the restriction.
+        cq.where(entityManager.getCriteriaBuilder().equal(from.get("sOUsername"), name)); // <- this will add the restriction.
 
         List<SOUser> soUsers = entityManager.createQuery(cq).getResultList();
         return soUsers.isEmpty() ? Optional.empty() : Optional.of(soUsers.get(0));

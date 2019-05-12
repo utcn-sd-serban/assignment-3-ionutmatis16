@@ -11,7 +11,8 @@ import javax.persistence.Id;
 
 @Data
 @Entity(name = "sousers")
-@NoArgsConstructor @AllArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class SOUser implements IDEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -42,7 +42,7 @@ const MyNavbar = ({
                     }
 
                     <button onClick={onSearchClick} className="btn myButton btn-search my-2 my-sm-0 " type="button"
-                    disabled={filterText.length <= 0}>
+                            disabled={filterText.length <= 0}>
                         Search
                     </button>
                 </form>

@@ -1,7 +1,10 @@
 package ro.utcn.sd.mid.assign1.slackoverflow.entity;
 
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -11,7 +14,8 @@ import java.util.List;
 @Getter
 @Setter
 @Entity(name = "questions")
-@AllArgsConstructor @NoArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 public class Question implements IDEntity, Comparable<Question> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -70,7 +74,7 @@ public class Question implements IDEntity, Comparable<Question> {
                 ", creationDate=" + creationDate.toString() +
                 ", tags=[ ";
         String strTags = "";
-        for(Tag t : tags) {
+        for (Tag t : tags) {
             strTags = strTags.concat(t.getTagName() + " ");
         }
         return res + strTags + "])";

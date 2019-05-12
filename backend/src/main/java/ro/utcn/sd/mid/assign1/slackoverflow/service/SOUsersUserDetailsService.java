@@ -1,7 +1,5 @@
 package ro.utcn.sd.mid.assign1.slackoverflow.service;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -11,7 +9,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import ro.utcn.sd.mid.assign1.slackoverflow.entity.SOUser;
 import ro.utcn.sd.mid.assign1.slackoverflow.repository.api.RepositoryFactory;
-import ro.utcn.sd.mid.assign1.slackoverflow.repository.api.SOUserRepository;
 
 import java.util.Collections;
 

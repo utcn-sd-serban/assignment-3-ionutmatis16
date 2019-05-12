@@ -63,16 +63,16 @@ class AnswerModel extends EventEmitter {
         return getClient().findAnswersByQuestionId(questionId)
             .then(answers => {
                 if (answers !== undefined) {
-                for (let i = 0; i < answers.length; i++) {
-                    answers[i].userName = sOUserModel.getSOUsername(parseInt(answers[i].userId));
-                    answers[i].editButtonPressed = false;
-                    answers[i].newAnswerText = answers[i].text;
-                }
-                this.state = {
-                    ...this.state,
-                    answers: answers
-                };
-                this.emit("changeAnswer", this.state);
+                    for (let i = 0; i < answers.length; i++) {
+                        answers[i].userName = sOUserModel.getSOUsername(parseInt(answers[i].userId));
+                        answers[i].editButtonPressed = false;
+                        answers[i].newAnswerText = answers[i].text;
+                    }
+                    this.state = {
+                        ...this.state,
+                        answers: answers
+                    };
+                    this.emit("changeAnswer", this.state);
                 }
             })
         //this.state.answers.filter(answer => answer.questionId === intId);

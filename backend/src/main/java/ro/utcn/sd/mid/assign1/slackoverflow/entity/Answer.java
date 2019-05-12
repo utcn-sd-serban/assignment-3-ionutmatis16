@@ -1,15 +1,22 @@
 package ro.utcn.sd.mid.assign1.slackoverflow.entity;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.sql.Timestamp;
 
 @Entity(name = "answers")
 @Getter
 @Setter
-@AllArgsConstructor @NoArgsConstructor
-public class Answer implements IDEntity{
+@AllArgsConstructor
+@NoArgsConstructor
+public class Answer implements IDEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

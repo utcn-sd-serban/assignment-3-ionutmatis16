@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class HibernateTagRepository extends HibernateAbstractRepository<Tag>
-implements TagRepository {
+        implements TagRepository {
     private final EntityManager entityManager;
 
     public HibernateTagRepository(EntityManager entityManager) {
@@ -27,7 +27,7 @@ implements TagRepository {
         Root<Tag> from = query.from(Tag.class);
 
         query.select(from);
-        query.where(builder.equal(from.get("tagName"),tagName)); // <- this will add the restriction.
+        query.where(builder.equal(from.get("tagName"), tagName)); // <- this will add the restriction.
 
         List<Tag> foundTags = entityManager.createQuery(query).getResultList();
         return foundTags.isEmpty() ? Optional.empty() : Optional.of(foundTags.get(0));

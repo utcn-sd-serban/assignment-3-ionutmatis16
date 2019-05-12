@@ -8,8 +8,9 @@ import javax.persistence.*;
 
 @Entity(name = "questionVotes")
 @Data
-@AllArgsConstructor @NoArgsConstructor
-public class QuestionVote implements IDEntity{
+@AllArgsConstructor
+@NoArgsConstructor
+public class QuestionVote implements IDEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

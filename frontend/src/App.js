@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {HashRouter, Switch, Route} from "react-router-dom";
+import {HashRouter, Route, Switch} from "react-router-dom";
 import SmartLoginRegister from "./view/smart/SmartLoginRegister";
 import SmartQuestionsList from "./view/smart/SmartQuestionsList";
 import SmartAnswersList from "./view/smart/SmartAnswersList";

@@ -18,9 +18,10 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 
 public class VoteServiceUnitTests {
-    private static Question q1 = new Question(1,1, "Title1", "Question 1",new Timestamp(System.currentTimeMillis()), new ArrayList<>(),0);
-    private static Answer a1 = new Answer(1,1,1,"Question 1",new Timestamp(System.currentTimeMillis()),0);
-    private static ApplicationEventPublisher eventPublisher = (o) -> {};
+    private static Question q1 = new Question(1, 1, "Title1", "Question 1", new Timestamp(System.currentTimeMillis()), new ArrayList<>(), 0);
+    private static Answer a1 = new Answer(1, 1, 1, "Question 1", new Timestamp(System.currentTimeMillis()), 0);
+    private static ApplicationEventPublisher eventPublisher = (o) -> {
+    };
 
     private static RepositoryFactory createMockedFactory() {
         RepositoryFactory factory = new InMemoryRepositoryFactory();
@@ -34,8 +35,8 @@ public class VoteServiceUnitTests {
         RepositoryFactory factory = createMockedFactory();
         VoteService voteService = new VoteService(factory);
 
-        voteService.voteQuestion(new QuestionVoteDTO(0,1,1,true));
-        voteService.voteQuestion(new QuestionVoteDTO(1,1,1,true));
+        voteService.voteQuestion(new QuestionVoteDTO(0, 1, 1, true));
+        voteService.voteQuestion(new QuestionVoteDTO(1, 1, 1, true));
     }
 
     @Test
@@ -49,6 +50,6 @@ public class VoteServiceUnitTests {
         voteService.voteAnswer(new AnswerVoteDTO(0, 1, 2, true));
         voteService.voteAnswer(new AnswerVoteDTO(0, 1, 2, false));
 
-        Assert.assertEquals(-1, (int)answerService.findById(1).getScore());
+        Assert.assertEquals(-1, (int) answerService.findById(1).getScore());
     }
 }

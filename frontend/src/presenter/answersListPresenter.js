@@ -6,7 +6,6 @@ class AnswersListPresenter {
         let newAnswer = answerModel.state.newAnswer;
         answerModel.addAnswer(sOUserModel.state.loggedInSOUser, questionId, newAnswer.text)
             .then(answerModel.changeNewAnswerProperty("text", ""));
-
     };
 
     onChange = (property, value) => {

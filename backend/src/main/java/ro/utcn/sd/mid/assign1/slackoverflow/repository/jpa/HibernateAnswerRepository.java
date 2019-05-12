@@ -28,7 +28,7 @@ public class HibernateAnswerRepository extends HibernateAbstractRepository<Answe
         Root<Answer> from = query.from(Answer.class);
 
         query.select(from);
-        query.where(builder.equal(from.get("questionId"),question.getId())); // <- this will add the restriction.
+        query.where(builder.equal(from.get("questionId"), question.getId())); // <- this will add the restriction.
 
         return entityManager.createQuery(query).getResultList();
     }
